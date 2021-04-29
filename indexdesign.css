@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+h1{
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+    padding-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+    padding-top: 5px;
+    margin-top: 5px;
+}
+#inputfield{
+    width: 600px;
+    border: 5px solid red;
+    border-radius: 2px;
+}
+#todocontainer p{
+    padding-top: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 30px;
+}
+#todocontainer BUTTON{
+    font-size: 20px;
+    margin-left: 50px;
+}
+#info{
+    color: green;
+    font-size: 20px;
+}
+BUTTON{
+    background-color: red;
+    border: 1px solid yellow;
+    padding: 5px;
+    font-size: 5px;
+    border-radius: 20px;
+    color: #fff;
+    
+
+}

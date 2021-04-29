@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html :lang="eng">
+<head>
+    <title>Todo List</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="indexdesign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 >TO DO LIST</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <input id="inputfield" type="text" required> <br>
+                <button class="btn btn-primary" id="addtodo" type="submit">Add To List </button>
+                
+
+                <div class="to-do" id="todocontainer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let addtodobutton = document.getElementById('addtodo');
+        let todocontainer = document.getElementById('todocontainer');
+        let inputfield = document.getElementById('inputfield');
+
+        addtodobutton.addEventListener('click', function(){
+            var paragraph = document.createElement('p')
+            var btn = document.createElement("BUTTON");
+            var btn2 = document.createElement("BUTTON");
+            btn.innerHTML = "Completed";
+            btn2.innerHTML = "Delete";
+            paragraph.innerText = inputfield.value;
+            todocontainer.appendChild(paragraph);
+            paragraph.appendChild(btn)
+            paragraph.appendChild(btn2)
+            inputfield.value = "";
+
+            btn.addEventListener('click', function(){
+                paragraph.style.textDecoration = "line-through";
+            })
+
+            btn2.addEventListener('click', function(){
+                todocontainer.removeChild(paragraph)
+            })
+
+                        
+        })
+
+
+    </script>
+
+</body>
